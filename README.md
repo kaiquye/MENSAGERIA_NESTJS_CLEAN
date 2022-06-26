@@ -15,7 +15,7 @@ Diagrama
 
 Dados do Pedido
 Segue abaixo um exemplo de paylod dos dados do pedido:
-json```
+```json
 {
   "user_info": {
     "phone": "(11) 98765-4321",
