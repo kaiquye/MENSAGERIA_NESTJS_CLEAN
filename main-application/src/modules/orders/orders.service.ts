@@ -10,10 +10,12 @@ import { NewOrderUsecases } from './useCases/new-order.usecases';
 import { AppError } from './model/app-error.model';
 import { MessageError } from './enums/message-error.enum';
 import { ClientKafka } from '@nestjs/microservices';
+import { MessageKafkaConsumerEnum } from './enums/message-kafka-consumer.enum';
 
 /**
- * Aqui ficam as regras que ficarão no papl
+ * Escolhi não utilizar o padrão S do solids nesta camada de serviço, apenas no casos de usos.
  **/
+
 @Injectable()
 export class OrdersService implements OnModuleInit, OnModuleDestroy {
   constructor(
@@ -35,6 +37,11 @@ export class OrdersService implements OnModuleInit, OnModuleDestroy {
       new AppError(MessageError.already, 409);
     }
     await this.createNewOrder.execute(createOrderDto);
-    return this.producer.send('teste', {});
+    return this.producer.send(MessageKafkaConsumerEnum._infos_geographical, {
+      id: createOrderDto.email,
+      data: {
+        zip_code: createOrderDto.zip_code,
+      },
+    });
   }
 }
