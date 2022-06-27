@@ -1,18 +1,5 @@
 import { INewOrder } from '../types/new-order.type';
-import {
-  IsString,
-  IsInt,
-  IsNumber,
-  IsPhoneNumber,
-  IsEmail,
-  isEmpty,
-  IsEmpty,
-  IsNotEmpty,
-  maxLength,
-  minLength,
-  MaxLength,
-  MinLength,
-} from 'class-validator';
+import { IsString, IsEmail, MaxLength, MinLength } from 'class-validator';
 
 export class CreateOrderDto implements INewOrder {
   @IsString()

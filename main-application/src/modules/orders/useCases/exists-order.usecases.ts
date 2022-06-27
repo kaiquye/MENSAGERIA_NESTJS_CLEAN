@@ -8,7 +8,10 @@ export class ExistsOrderUsecases implements InterfaceUseCases<INewOrder> {
   constructor(private orderRepository: OrderRepository) {}
 
   async execute(data: INewOrder): Promise<boolean> {
-    const order = await this.orderRepository.exists(data);
+    // essas propriedades seão destruturadas
+    const order = await this.orderRepository.exists({
+      OR: [{ email: data.email }],
+    });
     console.log(order);
     return !!order;
   }

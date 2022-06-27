@@ -17,7 +17,7 @@ export abstract class AbstractRepository<T> implements Repository<T> {
     return this.ORM[this.table_name.toString()].delete({ where: id });
   }
 
-  exists(data: Partial<T>): Promise<T> {
+  exists(data: Partial<T> | object): Promise<T> {
     return this.ORM[this.table_name.toString()].findFirst({
       where: {
         ...data,
