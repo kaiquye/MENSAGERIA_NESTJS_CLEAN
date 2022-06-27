@@ -1,12 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { OrderRepository } from '../repository/order.repository';
 import { INewOrder } from '../types/new-order.type';
+import { InterfaceUseCases } from './interface.useCases';
 
 @Injectable()
-export class NewOrderUsecases {
+export class NewOrderUsecases implements InterfaceUseCases<INewOrder> {
   constructor(private orderRepository: OrderRepository) {}
 
-  execute(data: INewOrder) {
-    this.orderRepository.registerNewOrder(data);
+  async execute(data: INewOrder) {
+    await this.orderRepository.registerNewOrder(data);
   }
 }
