@@ -1,0 +1,39 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model user_info {
+    id       Int       @id @default(autoincrement())
+    name String
+    phone String
+    email String @unique
+    status String @default("indefinite")
+    createAt DateTime @default(now())
+    address_attributes address_attributes[]
+    geographical_data geographical_data[]
+}
+
+model address_attributes {
+    id       Int       @id @default(autoincrement())
+    city String
+    neighborhood String
+    street String
+    uf String
+    zip_code String
+    user user_info  @relation(fields: [userId], references: [id])
+    userId Int
+}
+
+model geographical_data {
+   id       Int       @id @default(autoincrement())
+   longitude BigInt
+   latitude BigInt
+   user user_info  @relation(fields: [userId], references: [id])
+   userId Int
+}
