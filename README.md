@@ -1,7 +1,7 @@
 ### 🎑 geographical data
 
 Projeto desenvolvido com fins de aprimoramento em padrões de projeto e arquiteturas. 😄
-Foco principal em desnevolver uma aplicação simples integrando 1 micro-serviço, de forma que consiga mostrar um bom padrão de projeto é boas praticas.
+Foco principal em desenvolver uma aplicação simples integrando 1 micro-serviço, de forma que consiga mostrar um bom padrão de projeto é boas praticas.
 ### 🏛 design patterns
 using some of the principles of solids and also clean architecture
 
