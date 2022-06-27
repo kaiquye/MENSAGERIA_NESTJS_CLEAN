@@ -1,3 +1,12 @@
+vamos criar algumas tabelas para salvar no banco de dados. 
+uma tabela será responsavel por salvar todas as informações da requisição, Exemplo : Salvar as informações recebida 
+com um status : em andamento.
+
+CRIAR UMA INTERFACE E DEPOIS UMA CLASSE PARA VALIDAR OS PEDIDOS.
+
+depois de fazer a consulta na API salvar os dados sobre iat, long em uma tabela separada relacionada com a de usuario E TROCAR 
+O STATUS DA TABELA PRINCIPAL PARA : PEDIDO ACEITO.
+
 # DESAFIO_MENSAGERIA_NESTJS
  🏡 Desafio proposto : buscar informações sobre endereço de um pedido usando mensageria. salvar esse pedido, e na sequência fazer uma série de validações e enriquecimentos dos dados de forma assíncrona, para enfim distribuir esse pedido para os(as) nossos(as) profissionais.
  
