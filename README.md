@@ -1,3 +1,16 @@
+### 🎑 geographical data
+
+Projeto desenvolvido com fins de aprimoramento em padrões de projeto e arquiteturas. 😄
+Foco principal em desnevolver uma aplicação simples integrando 1 micro-serviço, de forma que consiga mostrar um bom padrão de projeto é boas praticas.
+### 🏛 design patterns
+using some of the principles of solids and also clean architecture
+
+### 📁 folder structure
+Separating the reponabilities of the **intities**, **use cases** and framework with **adapters**. 
+
+![image](https://user-images.githubusercontent.com/69175890/176015063-fe494e33-054a-4e4c-b134-acdbbf64c1db.png)
+
+
 # DESAFIO_MENSAGERIA_NESTJS
  🏡 Desafio proposto : buscar informações sobre endereço de um pedido usando mensageria. salvar esse pedido, e na sequência fazer uma série de validações e enriquecimentos dos dados de forma assíncrona, para enfim distribuir esse pedido para os(as) nossos(as) profissionais.
  
